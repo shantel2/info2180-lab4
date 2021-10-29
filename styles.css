@@ -1,0 +1,82 @@
+h1{
+    position: absolute;
+    width: 1215px;
+    height: 401px;
+    left: 236px;
+    top: 38px;
+
+    font-family: Times;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 74px;
+
+    color: #ECBB3E;
+}
+
+form input{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    position: absolute;
+    width: 66%;
+    height: 27px;
+    left: 236px;
+    top: 194px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 37px;
+
+    color: rgba(0, 0, 0, 0.25);
+
+    backdrop-filter: blur(4px);
+} 
+
+form{
+   display: grid;
+   grid-template-rows: 1fr 1fr;
+}
+
+h5{
+    position: absolute;
+    width: 1070px;
+    height: 0px;
+    left: 236px;
+    top: 236px;
+}
+
+H2{
+    position: absolute;
+    width: 215px;
+    height: 55px;
+    left: 236px;
+    top: 200px;
+
+    font-family: Times;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 55px;
+
+    color: #ECBB3E;
+}
+
+footer{
+    position: absolute;
+    width: 100%;
+    height: 57px;
+    left: 0px;
+    top: 700px;
+    background: #D20411;
+}
+
+footer .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #F5C64E;
+
+}
