@@ -2,28 +2,37 @@
 <html>
     <head>
         <meta charset="UTF-8"/>
-        <title> INFO 2180 Lab 4</title>
+        <title>Avengers Character Search</title>
         <link rel="stylesheet" href="styles.css"/>
         <script src="app.js"></script>
-        <?php include 'superheroes.php';?>
     </head>
     <body>
-        <img src="" alt="">
-        <h1> AVENGERS CHARACTER SEARCH </h1>
-    <!-- <div class="wrap">
-            <div class="search">
-               <input type="text" class="searchTerm" placeholder="search">
-               <button type="submit" class="searchButton">
-                 <i class="fa fa-search"></i>
-              </button>
-            </div>
-         </div> -->
-         <form id="form"> 
-            <input type="search" id="query" name="q" placeholder="Search...">
-            <button>Search</button>
-        </form>
+        <img src="logo.jpeg" alt="#">
+        <section class = main-container>
 
-        <h2>RESULTS:</h2>
+            <h1> AVENGERS CHARACTER SEARCH </h1>
+
+            <div class = "hero">
+                <form name="form" action="#" method="post" id="form"> 
+                    <div>
+                       <!-- <h3>Search by Full Name or Alias</h3> -->
+                    </div>
+                    
+                    <div class = "btn">
+                        <input type="search" id="hero" name="hero" placeholder="Search by Full Name or Alias">
+                        <button type="submit" name="search" class="btn" id="hero">Search</button>
+                    </div>
+                </form>
+            </div>
+
+            <div>
+                <h2>RESULTS:</h2>
+            </div>
+
+            <div class="result">
+
+            </div>
+        </section>
 
         <footer>
             <div class="container">

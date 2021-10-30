@@ -1,43 +1,50 @@
 h1{
-    position: absolute;
-    width: 1215px;
-    height: 401px;
-    left: 236px;
-    top: 38px;
+    text-align: center;
 
     font-family: Times;
     font-style: normal;
     font-weight: bold;
     font-size: 64px;
-    line-height: 74px;
-
+    margin-bottom: 1%;
     color: #ECBB3E;
+}
+
+form{
+    margin-left: 18%;
 }
 
 form input{
     border-top: none;
     border-left: none;
     border-right: none;
-    position: absolute;
-    width: 66%;
-    height: 27px;
-    left: 236px;
-    top: 194px;
+    align-items: center;
 
     font-family: Poppins;
     font-style: normal;
     font-weight: 500;
     font-size: 25px;
     line-height: 37px;
+    width: 68%;
 
     color: rgba(0, 0, 0, 0.25);
 
     backdrop-filter: blur(4px);
 } 
 
-form{
-   display: grid;
-   grid-template-rows: 1fr 1fr;
+button{
+    font-size: 16px;
+    border: 1px solid #D20411;
+    margin: 8px 0;
+    padding: 0.9vw 2vw;
+    border-radius: 5px;
+}
+
+img{
+    position: absolute;
+    width: auto;
+    height: 120px;
+    left: 153px;
+    margin-top: 0px;
 }
 
 h5{
@@ -49,17 +56,14 @@ h5{
 }
 
 H2{
-    position: absolute;
-    width: 215px;
-    height: 55px;
-    left: 236px;
-    top: 200px;
-
-    font-family: Times;
-    font-style: normal;
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
     font-weight: bold;
-    font-size: 48px;
-    line-height: 55px;
+    margin-left: 17%;
 
     color: #ECBB3E;
 }
@@ -78,5 +82,4 @@ footer .container{
     align-items: center;
     justify-content: center;
     color: #F5C64E;
-
 }
