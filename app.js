@@ -1,8 +1,8 @@
 window.onload = function() { 
 
     var button = document.getElementById("hero-btn");
-    button.addEventListener("click", function(e) {
-    e.preventDefault();
+    button.addEventListener("click", function(event) {
+    event.preventDefault();
 
     var output = document.getElementById("result");
     var userInput = document.getElementById("hero").value.replace(/[-&\/\\#,+()$@|~%!.'":;*?<>{}]/g,'');
@@ -13,6 +13,6 @@ window.onload = function() {
         output.innerHTML = "";
         output.innerHTML = data; 
     })
-    .catch(error => console.log("There was a problem with the request"));
+    .catch(error => console.log("ERROR!"));
   });
 };

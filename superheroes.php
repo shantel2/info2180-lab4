@@ -76,19 +76,19 @@ function sanitize_input($data){
     $data =ucwords($data);
     $data = stripslashes($data);
     $data = strip_tags($data);
-    //return $data;
+    return $data;
 }
 ?>
 
 <?php
-//$supList = json_encode($superheroes)
+
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     $output = "";
-    $supHero = $_GET["query"];
-    $supHero= trim(filter_var($supHero, FILTER_SANITIZE_STRING));
-    if (!empty($supHero)) {
+    $hero = $_GET["query"];
+    $hero= sanitize_input($hero);
+    if (!empty($hero)) {
         foreach ($superheroes as $superhero) {
-            if (strtoupper($supHero) == strtoupper($superhero['name'])  || strtoupper($supHero) == strtoupper($superhero['alias'])){
+            if (($hero) == ($superhero['name'])  || ($hero) == ($superhero['alias'])){
                 $output = "<h3> {$superhero['alias']} </h3><h4> {$superhero['name']} </h4><p> {$superhero['biography']} </p>";
                 break;
             }
