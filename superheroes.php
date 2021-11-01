@@ -69,8 +69,41 @@ $superheroes = [
 
 ?>
 
-<ul>
-<?php foreach ($superheroes as $superhero): ?>
-  <li><?= $superhero['alias']; ?></li>
-<?php endforeach; ?>
-</ul>
+<?php 
+//sanitize data funtion
+function sanitize_input($data){
+    $data = trim($data);
+    $data =ucwords($data);
+    $data = stripslashes($data);
+    $data = strip_tags($data);
+    //return $data;
+}
+?>
+
+<?php
+//$supList = json_encode($superheroes)
+if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+    $output = "";
+    $supHero = $_GET["query"];
+    $supHero= trim(filter_var($supHero, FILTER_SANITIZE_STRING));
+    if (!empty($supHero)) {
+        foreach ($superheroes as $superhero) {
+            if (strtoupper($supHero) == strtoupper($superhero['name'])  || strtoupper($supHero) == strtoupper($superhero['alias'])){
+                $output = "<h3> {$superhero['alias']} </h3><h4> {$superhero['name']} </h4><p> {$superhero['biography']} </p>";
+                break;
+            }
+            else {
+                $output =  '<h5> SUPERHERO NOT FOUND </h5>';
+            }
+        }
+        echo $output;
+    } 
+    else {
+        ?>
+        <ul>
+        <?php foreach ($superheroes as $superhero): ?>
+            <li><?= $superhero['alias']; ?></li>
+            <?php endforeach; ?>
+        </ul>
+        <?php } ?> 
+<?php } ?>
